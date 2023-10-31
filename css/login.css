@@ -1,0 +1,173 @@
+:root {
+  --primary: #1F1B96;
+  --secondary: #E3E8E3;
+  --background: #EBEBEF;
+  --text: #17171C;
+  --accent: #3E65A8;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/login-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px, 0px;
+}
+.form-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 400px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.575);
+  border: 1px solid var(--primary);
+  overflow: hidden;
+}
+.botones {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  border-radius: 30px;
+  border: 1px solid var(--accent);
+}
+.botonLogin {
+  cursor: pointer;
+  padding: 10px;
+  background: transparent;
+  border: 0;
+  outline: none;  
+  z-index: 3;
+}
+#boton-selected {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--accent);
+  height: 100%;
+  width: 50%;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+  transition: 0.5s;
+}
+.inputLogin {
+  padding: 10px;
+  width: 70%;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--accent);
+  border-left: 0;
+  outline: none;
+  background: transparent;
+}
+.btnLogin {
+  cursor: pointer;
+  width: 70%;
+  padding: 10px;
+  margin-top: 10px;
+  background: var(--accent);
+  border-radius: 30px;
+  border: none;
+  color: #E3E8E3;
+}
+#formRegister {
+  position: absolute;
+  left: 100%;
+  bottom: 30px;
+  height: 70%;
+}
+#formLogin {
+  position: relative;
+  left: 0px;
+}
+#botonIndex {
+  position: absolute;
+  color: #E3E8E3;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-color: var(--accent);
+  border-radius: 30px;
+  background: linear-gradient(0deg, rgba(62,101,168,1) 0%, rgba(27,81,150,1) 50%, rgba(31,27,150,1) 100%);
+  background-size: 100% 0px;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(50px);
+}
+#botonIndex:hover {
+  background-size: 100% 100%;
+  color: #E3E8E3;
+}
+#registertxt, #logintxt {
+  position: absolute;
+}
+#logintxt {
+  top: 60%;
+}
+#registertxt {
+  top: 75%;
+}
+#show {
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 39%;
+  transform: translateX(120px);
+  cursor: pointer;
+  filter: opacity(40%);
+}
+#showregister1 {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 43%;
+  transform: translateX(120px);
+  cursor: pointer;
+  filter: opacity(40%);
+}
+#showregister2 {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 61%;
+  transform: translateX(120px);
+  cursor: pointer;
+  filter: opacity(40%);
+}
+
+@media (max-width: 300px) {
+  .form-container {
+    width: 280px;
+  }
+  #show, #showregister1, #showregister2 {
+    left: 90px;
+  }
+}

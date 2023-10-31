@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <title>GadgetCom</title>
+</head>
+<body>
+    <header id="index-header">
+        <div id="index-title">
+            <img src="images/logo.png" alt="Logo" width="40">
+        </div>
+        <div id="navbar-html">
+            <button id="last-reviews" onclick="selectTab(this); lastReviews()">
+                <span class="icon"><img src="images/icons/fire.png" alt="último"></span>
+                <span class="text">Últimas reseñas</span>
+            </button>
+            <button id="pro-reviews" onclick="selectTab(this); proReviews()">
+                <span class="icon"><img src="images/icons/professional.png" alt="profesionales"></span>
+                <span class="text">Reseñas profesionales</span>
+            </button>
+            <button id="verified-reviews" onclick="selectTab(this); verifiedReviews()">
+                <span class="icon"><img src="images/icons/check.png" alt="verificadas"></span>
+                <span class="text">Reseñas verificadas</span>
+            </button>
+        </div>
+        <a class="button" id="button" href="html/login.html">Iniciar sesión</a>
+    </header>
+    <main class="index-main">
+        <nav id="index-nav">
+            <h2>Categorías</h2>
+            <div class="category-container">
+                <a href="html/headphones.html"><img src="images/icons/headphones-black.png" alt="Auriculares" width="25">Auriculares</a>
+                <a href="html/monitors.html"><img src="images/icons/monitor-black.png" alt="Monitor" width="25">Monitores</a>
+                <a href="html/mouses.html"><img src="images/icons/mouse-black.png" alt="Mouses" width="25">Mouses</a>
+                <a href="html/keyboards.html"><img src="images/icons/keyboard-black.png" alt="Teclados" width="25">Teclados</a>
+                <a href="html/microphones.html"><img src="images/icons/microphone-black.png" alt="Teclados" width="25">Micrófonos</a>
+            </div>  
+            <h2>Usuarios profesionales</h2>
+            <div class="category-container">
+                <div class="pro-user">
+                    <img src="images/profile.png" alt="foto de perfil" width="40">
+                    <h4>Usuario 1</h4>
+                    <img src="images/icons/verified.png" alt="verificado" width="20px" style="margin-left: 7px;">
+                </div>
+                <div class="pro-user">
+                    <img src="images/profile.png" alt="foto de perfil" width="40">
+                    <h4>Usuario 2</h4>
+                    <img src="images/icons/verified.png" alt="verificado" width="20px" style="margin-left: 7px;">
+                </div>
+                <div class="pro-user">
+                    <img src="images/profile.png" alt="foto de perfil" width="40">
+                    <h4>Usuario 3</h4>
+                    <img src="images/icons/verified.png" alt="verificado" width="20px" style="margin-left: 7px;">
+                </div>
+            </div>
+        </nav>
+        <div id="main-content" class="main-content">
+            <div class="toolbar">
+                <div id="search-container">
+                    <div class="input-button">
+                        <button id="clean-button" onclick="cleanSearch()">X</button>
+                        <input type="text" id="search-input" placeholder="Buscar GadgetCom">
+                        <button class="button" id="search-button">Buscar</button>
+                    </div>
+                </div>
+                <div class="type-user">
+                    <img src="images/profile.png" alt="perfil">
+                    <h3>Visitante</h3>
+                </div>
+                <h5>Registrate o inicia sesión para formar parte de la comunidad</h5>
+                <button id="register" class="button" onclick="registrate()">Registrarse</button>
+                <button class="button">Ayuda</button>
+                <button class="button">Novedades</button>
+            </div>
+            <!-- ÚLTIMAS RESEÑAS -->
+            <div id="last-reviews-container">
+                <div class="review-container">
+                    <h3 class="banner">Aquí encontrarás las reseñas de los productos más recientes en el mercado</h3>
+                    <a href="" class="review" id="mechanical-mini">
+                        <div class="info">
+                            <h3>LOGITECH MX MECHANICAL MINI</h3>
+                            <div class="stars-container">
+                                <h3 id="calification">Valoración</h3>
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="review" id="clutch-lightweight">
+                        <div class="info">
+                            <h3>MSI CLUTCH GM51 LIGHTWEIGHT</h3>
+                            <div class="stars-container">
+                                <h3 id="calification">Valoración</h3>
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="review" id="mag">
+                        <div class="info">
+                            <h3>MSI MAG 325CQRF-QD</h3>
+                            <div class="stars-container">
+                                <h3 id="calification">Valoración</h3>
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+            <!-- RESEÑAS PROFESIONALES -->
+            <div id="pro-reviews-container">
+                <div class="review-container">
+                    <h3 class="banner">Aquí encontrarás reseñas publicadas por usuarios profesionales</h3>
+                    <a href="" class="review" id="superlight">
+                        <div class="info">
+                            <h3>LOGITECH PRO X SUPERLIGHT 2</h3>
+                            <div class="stars-container">
+                                <h3 id="calification">Valoración</h3>
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="review" id="xeneon-flex">
+                        <div class="info">
+                            <h3>CORSAIR XENEON FLEX</h3>
+                            <div class="stars-container">
+                                <h3 id="calification">Valoración</h3>
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="review" id="procast">
+                        <div class="info">
+                            <h3>HYPERX PROCAST XLR</h3>
+                            <div class="stars-container">
+                                <h3 id="calification">Valoración</h3>
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>    
+            <!-- RESEÑAS VERIFICADAS -->
+            <div id="verified-reviews-container">
+                <div class="review-container">
+                    <h3 class="banner">Aquí encontrarás reseñas publicadas por usuarios verificados</h3>
+                    <a id="razer-kraken" class="review" href="">
+                        <div class="info">
+                            <h3>RAZER KRAKEN</h3>
+                            <div class="stars-container">
+                                <h3 id="calification">Valoración</h3>
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="review" id="impact">
+                        <div class="info">
+                            <h3>REDRAGON IMPACT M908</h3>
+                            <div class="stars-container">
+                                <h3 id="calification">Valoración</h3>
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="review" id="kumara">
+                        <div class="info">
+                            <h3>REDRAGON KUMARA K552</h3>
+                            <div class="stars-container">
+                                <h3 id="calification">Valoración</h3>
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                                <img src="images/icons/star.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="index-footer">
+        <img src="images/logo-nombre.png" alt="logo+nombre">
+        <div class="contact-container">
+        </div>
+    </footer>
+
+
+    <!-- MODAL CON DESCRIPCIÓN DE LA PÁGINA -->
+    <div class="modal">
+        <div id="info-button" onclick="openModal()"><img src="images/icons/info.png" alt="information"></div>
+        <div id="info-modal" class="modal">
+            <div class="modal-content">
+                <button class="button" id="close-button" onclick="closeModal()">X</button>
+                <p>Navega por reseñas de productos tecnológicos y toma mejores decisiones. Nuestra comunidad te 
+                    ayudará a elegir los dispositivos perfectos para tus necesidades con análisis objetivos. También
+                    podrás realizar tus propias reseñas para ayudar a otros miembros.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

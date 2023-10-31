@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../images/icons/favicon.ico">
+    <title>GadgetCom - Iniciar sesión</title>
+</head>
+<body>
+    <button id="botonIndex" onclick="goToIndex()">Volver a la página principal</button>
+    <div class="form-container">
+        <div class="botones">
+            <div id="boton-selected"></div>
+            <button class="botonLogin" onclick="showLogin()">Login</button>
+            <button id="botonLogin" class="botonLogin" onclick="showRegister()">Register</button>
+        </div>
+        <form id="formLogin" class="form">
+            <input type="email" id="inputEmailLogin" class="inputLogin" placeholder="Email" required>
+            <input type="password" id="inputContraseñaLogin" class="inputLogin" placeholder="Contraseña" required>
+            <button id="show" onclick="showPassword(this, inputContraseñaLogin)"><img src="../images/icons/visibility.png" alt="ver"></button>
+            <p id="logintxt"></p>
+            <button type="submit" id="submitLogin" class="btnLogin">Login</button>
+        </form>
+        <form id="formRegister" class="form">
+            <input type="text" id="inputNombreRegister" class="inputLogin" placeholder="Nombre" required>
+            <input type="email" id="inputEmailRegister" class="inputLogin" placeholder="Email" required>
+            <input type="password" id="inputContraseñaRegister" class="inputLogin" placeholder="Contraseña" required>
+            <button onclick="showPassword(this, inputContraseñaRegister)" id="showregister1"><img src="../images/icons/visibility.png" alt="ver"></button>
+            <input type="password" id="inputConfContraseña" class="inputLogin" placeholder="Confirmar contraseña" required>
+            <button onclick="showPassword(this, inputConfContraseña)" id="showregister2"><img src="../images/icons/visibility.png" alt="ver"></button>
+            <p id="registertxt"></p>
+            <button type="submit" class="btnLogin">Register</button>
+        </form>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>
